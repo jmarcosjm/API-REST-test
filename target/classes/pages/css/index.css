@@ -1,0 +1,41 @@
+body
+{
+background-color: rgba(0, 0, 0, 0.664);
+}
+.insert,.update,.delete,.show
+{
+    margin: 15px auto;
+    border-radius: 20px;
+    width: 250px;
+}
+.menu
+{
+    margin-top: 100px;
+}
+.a
+{
+    text-align: center;
+}
+.test
+{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: rgb(20, 1, 46);
+    top: 0;
+    width: 100%;
+    min-height: 80px;
+}
+
+@media screen and (min-width: 1px) and (max-width:961px)
+{
+    .btn-large
+    {
+        height: 35px ;
+        line-height: 27px;
+        font-size: 13px;
+        padding: 0 14px;
+        width: 100%;
+    }
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="node_modules/materialize-css/dist/css/materialize.min.css"  media="screen,projection"/>
+    <link rel="stylesheet" href="css/insert.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>insert</title>
+</head>
+<body>
+    <div class="test">
+        <h4 style="margin: 0px; font-weight: bolder; color: aliceblue;">Sistema de gestão de pais candidatos</h4>
+    </div>
+    <main class="container">
+        <div class="menu">
+            <div class="row">
+              <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
+                <form id="cad" method="POST" action="/insert" target="dummyframe" class="col s12">
+                  <div class="row">
+
+                    <div class="input-field col s8 offset-s2">
+                      <input class="inp" placeholder="Somente números" id="cpf" name="cpf" type="text" data-length="11" required>
+                      <label for="cpf">CPF</label>
+                    </div>
+
+                    <div class="input-field col s8 offset-s2">
+                      <input class="inp" placeholder="João Pedro" id="nome1" name="primeiro_nome" type="text" class="validate" required>
+                      <label for="nome1">Primeiro nome</label>
+                    </div>
+
+                    <div class="input-field col s8 offset-s2">
+                      <input class="inp" placeholder="Da Cunha" id="nome2" name="sobrenome" type="text" class="validate" required>
+                      <label for="nome2">Sobrenome</label>
+                    </div>
+
+                    <div class="input-field col s8 offset-s2">   
+                      <label class="ls" for="eCivil">Estado civíl</label>
+                      <select class="inp" name="estado_civil" id="eCivil" required>
+                        <option value="solteiro">Solteiro(a)</option>
+                        <option value="casado">Casado(a)</option>
+                      </select>                  
+                    </div>
+
+                    <div class="input-field col s8 offset-s2">   
+                      <label class="ls" for="sexo">Sexo</label>
+                      <select class="inp" name="sexo" id="sexo" required>
+                        <option value="M">Masculino</option>
+                        <option value="F">Feminino</option>
+                        <option value="O">Outro</option>
+                      </select>                  
+                    </div>
+
+                    <div class="input-field col s8 offset-s2">
+                      <input class="inp" id="date" name="data_nascimento" type="date" class="validate" required>
+                      <label for="date">Data de nascimento</label>
+                    </div>
+                 
+                    <div class="input-field col s8 offset-s2">
+                      <input class="inp" placeholder="ex: 1000" id="renda" name="renda" type="text" class="validate">
+                      <label for="renda">Renda</label>
+                    </div>
+                    <div class="input-field col s8 offset-s2">
+                      <input id="sub" class="btn-large blue" type="submit" value="Inserir">
+                      <a href="index.html" class=" waves-effect waves-light green btn-large"><i class="material-icons right">arrow_back</i>voltar</a>
+                    </div>
+                    <div id="msgCase" style="background-color: white; border: 4px solid black; " class="col s8 offset-s2 ">
+                      <p id="message" style="text-align: center; color: black; font-weight: bolder;"></p>
+                    </div>
+
+                  </div>
+                </form>
+              </div>
+        </div>
+    </main>
+    
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+    <script type="text/javascript" src="node_modules/materialize-css/dist/js/materialize.min.js"></script>
+    <script src="js/insert.js"></script>
+</body>
+</html>

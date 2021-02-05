@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <title>PUC-Jaum-Noticias</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="estilo.css">
+  <script src="app.js"></script>
+  <link href="flag-icon-css-master/css/flag-icon.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a7c5b994aa.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!---MODAL-->
+  <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalCenterTitle">Entrar</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form class="mod-login">
+            <div class="user">
+              <label for="username">Usuario:</label><br>
+              <input type="text" id="username" name="username">
+            </div>
+            <br>
+            <div class="pass">
+              <label for="pwd">Senha:</label><br>
+              <input type="password" id="pwd" name="pwd">
+            </div>
+            <br>
+            <input type="submit" value="Entrar">
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary">Registrar</button>
+          <button type="button" class="btn btn-primary">Esqueci minha senha</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <header class="header">
+    <div class="top">
+      <div class="container">
+        <div class="row">
+          <div class="col-4 logo">
+            <img src="imgs/logo.png" alt="">
+          </div>
+          <div class="register col-8">
+            <ul class="login">
+              <li>Inscrever-se</li>
+              <li>Registar</li>
+              <li>Entrar</li>
+            </ul>
+            <ul class="places">
+              <li>País:</li>
+              <li><i class="flag-icon flag-icon-br"></i></li>
+              <li><i class="flag-icon flag-icon-es"></i></li>
+              <li><i class="flag-icon flag-icon-us"></i></li>
+              <li><i class="flag-icon flag-icon-ca"></i></li>
+              <li><i class="flag-icon flag-icon-gb"></i></li>
+              <li><i class="flag-icon flag-icon-pt"></i></li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bot">
+      <div class="container">
+        <div class="head-logo">
+          <img src="imgs/logo.png" alt="">
+        </div>
+        <div class="row">
+          <div class="col-12 nav_area">
+            <input type="checkbox" name="" id="menutoggle">
+            <label for="menutoggle" class="icon">
+              <i class="fas fa-bars"></i>
+            </label>
+            <div class="menu">
+              <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item nav-header">
+                      <img class="nav-logo" src="imgs/logo.png" alt="">
+                    </li>
+
+                    <li class="dropdown mob-item mob-pais">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        País
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#"><i class="flag-icon flag-icon-br"></i> Brasil</a>
+                        <a class="dropdown-item" href="#"><i class="flag-icon flag-icon-es"></i> Espanha</a>
+                        <a class="dropdown-item" href="#"><i class="flag-icon flag-icon-ca"></i> Canadá</a>
+                        <a class="dropdown-item" href="#"><i class="flag-icon flag-icon-gb"></i> Reino Unido</a>
+                        <a class="dropdown-item" href="#"><i class="flag-icon flag-icon-us"></i> Estados Unidos</a>
+                        <a class="dropdown-item" href="#"><i class="flag-icon flag-icon-pt"></i> Portugal</a>
+                      </div>
+                    </li>
+                    <li class="nav-item desk-nav-item active">
+                      <a id="C0-3" style="display: flex; padding: 13px 5px 13px 5px; min-height: 100%;" class="nav-link"
+                        href="#"><i class="fas fa-home home"></i><span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item mob-item active">
+                      <a class="nav-link" href="#">Pagina inicial<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Equipe</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Novidades
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a id="C0-2" class="dropdown-item" href="#">Notícias Exclusivas</a>
+                        <div class="dropdown-divider"></div>
+                        <a id="S1-2" class="dropdown-item" href="#">Notícias Internacionais</a>
+                        <div class="dropdown-divider"></div>
+                        <a id="S2-2" class="dropdown-item" href="#">Notícias Regionais</a>
+                      </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Categorias
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a id="C1-2" class="dropdown-item" href="#">Ciencia</a>
+                        <div class="dropdown-divider"></div>
+                        <a id="C2-2" class="dropdown-item" href="#">Tecnologia</a>
+                        <div class="dropdown-divider"></div>
+                        <a id="C3-2" class="dropdown-item" href="#">Entretenimento</a>
+                        <div class="dropdown-divider"></div>
+                        <a id="C4-2" class="dropdown-item" href="#">Esportes</a>
+                      </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Sobre nós
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Local Sede</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Nossa História</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Contato</a>
+                      </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Pesquisas favoritadas
+                      </a>
+                      <div id="favS" class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a id="C1-2" class="dropdown-item" href="#">Ciencia</a>
+                        <div class="dropdown-divider"></div>
+                      </div>
+                    </li>
+                    <li class="nav-item store">
+                      <a class="nav-link" href="#">Loja online</a>
+                    </li>
+                  </ul>
+                  
+
+                  <a class="mob-item ancor-login" data-toggle="modal" data-target="#login">Entrar</a>
+
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </header>
+
+  <main class="container">
+    <div class="row">
+      <div class="col-12">
+        <div style="margin-top: 80px; padding: 15px;" class="bloco6">
+          <div style="align-items: center; justify-content: center; text-align: center;" class="row">
+                <input class="form-control mr-sm-2" placeholder="Search" style="width:50%; background-color: rgb(37, 37, 37); color: white;" id="pesquisa" type="text">
+           <div style="text-align: center; width:100%;"></div><button id="search" class="btn btn-light" style="margin-top: 10px;">Pesquisar</button></div> 
+           <div style="text-align: center; width:100%;"><button id="fav"  class="btn btn-dark" style="margin-top: 10px;">Favoritar e pesquisar</button></div> 
+            
+            <div class="col-12">
+              <div class="row">
+                <div style="text-align: center;" class="col-6">
+                  <ul style="list-style: none; padding-left: 0;">
+                    <h4>Categorias</h4>
+                    <li><button id="C0" style="width: 150px; margin:3px auto;" class="btn btn-primary">Ultimas noticias</button></li>
+                    <li><button id="C1" style="width: 150px; margin:3px auto;" class="btn btn-danger">Ciencia</button></li>
+                    <li><button id="C2" style="width: 150px; margin:3px auto;" class="btn btn-info">Tecnologia</button></li>
+                    <li><button id="C3" style="width: 150px; margin:3px auto; color: white;" class="btn btn-warning">Entretenimento</button></li>
+                    <li><button id="C4" style="width: 150px; margin:3px auto;" class="btn btn-success">Esportes</button></li>
+                  </ul>
+                </div>
+                <div style="text-align: center;" class="col-6">
+                  <ul class="center-block" style="list-style: none; padding-left: 0;">
+                    <h4>Fontes</h4>
+                    <li><button id="S0" style="width: 100px; margin:3px auto;" class="btn btn-primary">Todas</button></li>
+                    <li><button id="S1" style="width: 100px; margin:3px auto;" class="btn btn-secondary">CNN</button></li>
+                    <li><button id="S2" style="width: 100px; margin:3px auto;" class="btn btn-secondary">Globo</button></li>
+                    <li><button id="S3" style="width: 100px; margin:3px auto; color: white;" class="btn btn-secondary">WSJ</button></li>
+                    <li><button id="S4" style="width: 100px; margin:3px auto;" class="btn btn-secondary">Techradar</button></li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-12">
+        <div class="container left">
+          <div id="tela" style="margin-top: 20px;" class="row">
+            <h2 id="title"></h2>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-sm-5 leftfoot">
+          <h4>Sobre esse site:</h4>
+          <p>Esse site é uma simulação de um portal de notícias padrão. O conteudo que compõe essa página não é de
+            autoria própria, visto que todas as noticias foram retiradas de outros portais. O intuito desse projeto era
+            se
+            aproximar ao máximo do layout proposto e espero ter cumprido com esse objetivo. Sites com as notícias
+            originais: <a target="_blank" href="https://portal.fiocruz.br/">Portal Fiocruz</a>, <a target="_blank"
+              href="https://www.globo.com/">Globo.com</a>, <a target="_blank" href="https://olhardigital.com.br/">Olhar
+              Digital</a>. Visitem e se informem!</p>
+        </div>
+        <div class="col-4 middle">
+          <h4>Acesso rápido</h4>
+          <div class="lists">
+            <ul>
+              <li><a href="#">Pargina inicial</a></li>
+              <li><a href="#">Equipe</a></li>
+              <li><a href="#">Novidades</a></li>
+              <li><a href="#">Categorias</a></li>
+              <li><a href="#">Sobre nós</a></li>
+              <li><a href="#">Loja</a></li>
+            </ul>
+            <ul>
+              <li><a href="#">Contato</a></li>
+              <li><a href="#">Suporte</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+            <ul>
+              <li><a href="#">Trabalhe conosco</a></li>
+              <li><a href="#">Termos legais</a></li>
+              <li><a href="#">Política de privacidade</a></li>
+              <li><a href="#">Anuncie conosco</a></li>
+              <li><a href="#">Minha conta</a></li>
+              <li><a href="#">Enviar feedback</a></li>
+              <li><a href="#">Denuncie</a></li>
+              <li><a href="#">Princípios editoriais</a></li>
+            </ul>
+          </div>
+
+        </div>
+        <div class="col-lg-4 col-sm-7 rightfoot">
+          <div class="tt">
+            <h4>@jaum__jaum no twitter</h4>
+            <div class="simutt">
+              <img class="profilepic" src="imgs/MHDEM6EY_400x400.jpg" alt="">
+              <div class="balao2">
+                <p>O twitter serve só pra qnd eu tenho que acordar cedo mas n quero dormir.</p>
+              </div>
+
+            </div>
+            <p class="name">@jaum__jaum &nbsp;&nbsp;&nbsp;João Marcos</p>
+            <p class="tempo">15 mins</p>
+
+          </div>
+
+          <div class="socialmidia">
+            <h4>Me siga nas redes sociais:</h4>
+            <a target="_blank" href="https://www.facebook.com/joaomarcos.Oliveira.Magalhaes"><i
+                class="fab fa-facebook"></i></a>
+            <a target="_blank" href="https://www.instagram.com/joao__marcos__/"><i class="fab fa-instagram"></i></a>
+            <a target="_blank" href="https://twitter.com/jaum__jaum"><i class="fab fa-twitter"></i></a>
+            <a target="_blank" href="https://www.youtube.com/channel/UC0QqTmh55gYU-t7IDYwFOJg"><i
+                class="fab fa-youtube"></i></a>
+            <a target="_blank" href="https://www.reddit.com/"><i class="fab fa-reddit"></i></a>
+            <a target="_blank" href="https://br.pinterest.com/"><i class="fab fa-pinterest"></i></a>
+          </div>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 copyright">
+          © Copyright 2020-2020 - Site simulado PUC Noticias.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

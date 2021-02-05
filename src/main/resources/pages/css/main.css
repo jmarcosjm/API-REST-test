@@ -1,0 +1,19 @@
+body
+{
+background-color: rgba(0, 0, 0, 0.664);
+}
+.menu
+{
+    margin-top: 100px;
+}
+.test
+{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: rgb(20, 1, 46) !important;
+    top: 0;
+    width: 100%;
+    min-height: 80px;
+}

@@ -1,0 +1,35 @@
+.character-counter
+{
+    color: white !important;
+}
+input
+{
+color: white ;
+}
+label
+{
+    color: white !important;
+    font-weight: bolder !important;
+}
+
+.ls
+{
+    font-size: .8rem !important;
+    left: 0rem !important;
+    position: relative !important;
+}
+a
+{
+    margin: 5px;
+}
+
+@media screen and (min-width: 1px) and (max-width:961px)
+{
+    .btn-large
+    {
+        height: 27px ;
+        line-height: 27px;
+        font-size: 13px;
+        padding: 0 14px;
+    }
+}

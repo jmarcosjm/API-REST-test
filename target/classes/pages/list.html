@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="node_modules/materialize-css/dist/css/materialize.min.css"  media="screen,projection"/>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/list.css">
+    <title>insert</title>
+</head>
+<body>
+    <div class="test">
+        <h4 style="margin: 0px; font-weight: bolder; color: aliceblue;">Sistema de gestão de pais candidatos</h4>
+    </div>
+    <main class="container">
+        <div class="menu">
+            <h3 class="title" style="text-align: center;">TABELA DE CANDIDATOS PARA ADOTAR</h3>
+            <div class="row tspace">    
+                     
+                <table>
+                    
+                    <thead>
+                    <tr>
+                        <th>CPF</th>
+                        <th>Primeiro nome</th>
+                        <th>Sobrenome</th>
+                        <th>Data de nascimento</th>
+                        <th>Estado civil</th>
+                        <th>Sexo</th>
+                        <th>Renda</th>
+                    </tr>
+                    </thead>
+
+                    <tbody id="tela">
+                    <tr class="line">
+                        <td>11111111111</td>
+                        <td>Pedro</td>
+                        <td>Costa</td>
+                        <td>15/08/1990</td>
+                        <td>solteiro</td>
+                        <td>M</td>
+                        <td>2000</td>
+                    </tr>
+                    <tr class="line">
+                        <td>11111111111</td>
+                        <td>Pedro</td>
+                        <td>Costa</td>
+                        <td>15/08/1990</td>
+                        <td>solteiro</td>
+                        <td>M</td>
+                        <td>2000</td>
+                    </tr>
+                    </tbody>
+                </table>  
+            </div>
+            <div class="row">
+                <div class="a col s6 offset-s3">
+                    <a href="index.html" class=" waves-effect waves-light green btn-large"><i class="material-icons right">arrow_back</i>voltar</a>
+                    <a id="refresh" class=" waves-effect waves-light orange btn-large"><i class="material-icons right">update</i>listar</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+    <script type="text/javascript" src="node_modules/materialize-css/dist/js/materialize.min.js"></script>
+    <script src="js/list.js"></script>
+</body>
+</html>
